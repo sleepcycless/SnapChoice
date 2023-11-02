@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Decision Anxiety Reliever</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Dancing+Script&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SnapChoice!</h1>
+    <div id="choices-section">
+      <input type="text" id="choice-input" placeholder="Enter a choice...">
+      <button id="add-choice">Add</button>
+    </div>
+    <ul id="choices-list"></ul>
+    <button id="decide-button" disabled>Decide!</button>
+    <div id="error-message" style="color: red; display: none;">Add at least two choices to proceed!</div>
+  </div>
+
+  <!-- The new page for the spinning wheel -->
+  <div id="wheel-page" class="container" style="display: none;">
+    <h1>Spinning the Wheel...</h1>
+    <div id="wheel"></div>
+    <div id="wheel-result"></div>
+  </div>
+
+  <!-- Embedded audio player, it won't play until an action triggers it -->
+  <audio id="backgroundMusic" loop>
+    <source src="path_to_your_music_file.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

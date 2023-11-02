@@ -1,0 +1,105 @@
+/* Global and Container Styles */
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: #1a1d22; /* Even darker background */
+    color: #ecf0f1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.5s; 
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 20px;
+    background: #2e333b; /* Darkened the container a bit more */
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    text-align: center;
+    border: 2px solid #444; /* Added a subtle border */
+    border-radius: 10px; /* Rounded the container's edges */
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transitions */
+}
+
+.container:hover {
+    transform: scale(1.02); 
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Headings */
+h1 {
+    font-family: 'Dancing Script', cursive; 
+    font-size: 2.8rem; /* Increased size a bit more */
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+/* Choice Input and List */
+#choices-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; 
+}
+
+#choice-input {
+    width: 70%;
+    padding: 10px; 
+    border-radius: 4px; 
+    border: none; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+#choice-input:focus {
+    box-shadow: 0px 0px 20px rgba(236, 240, 241, 0.8); /* Added focus effect */
+    background-color: #1a1d22;
+    color: #ecf0f1;
+}
+
+#choices-list {
+    margin-top: 10px;
+}
+
+#choices-list li {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Dancing Script', cursive; 
+}
+
+/* Wheel Styles */
+#wheel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 6px solid #444; /* Darkened border */
+    overflow: hidden;
+    margin: 40px auto; 
+}
+
+.segment {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: #3498db; /* default color, can be changed */
+    transform-origin: 0% 50%;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+.alt {
+    background: #1a73e8; /* Changed the alternate color */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Embedding the Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins|Dancing+Script&display=swap');
